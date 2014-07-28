@@ -161,7 +161,7 @@ def list(config=None):
                     result += "    {0} -> {1}@{2}:{3}".format(
                         colored(host["host"], 'green', attrs=["bold", ]),
                         host.get("options").get("user", get_default("user", storm_.defaults)),
-                        host.get("options").get("hostname", "[hostname_not_specified]"),
+                        host.get("options").get("hostname", host["host"]),
                         host.get("options").get("port", get_default("port", storm_.defaults))
                     )
 
