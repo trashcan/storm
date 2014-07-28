@@ -152,7 +152,7 @@ def list(config=None):
     storm_ = get_storm_instance(config)
 
     try:
-        result = colored('Listing entries:', 'white', attrs=["bold", ]) + "\n\n"
+        result = colored('Listing entries:', 'white', attrs=["bold", ]) + "\n"
         result_stack = ""
         for host in storm_.list_entries(True):
 
@@ -182,7 +182,7 @@ def list(config=None):
                     if extra:
                         result = result[0:-1]
 
-                    result += "\n\n"
+                    result += "\n"
                 else:
                     result_stack = colored("   (*) General options: \n", "green", attrs=["bold",])
                     for key, value in six.iteritems(host.get("options")):
