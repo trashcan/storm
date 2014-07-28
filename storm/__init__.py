@@ -106,7 +106,7 @@ class Storm(object):
             formatted_results.append("    {0} -> {1}@{2}:{3}\n".format(
                 host_entry.get("host"),
                 host_entry.get("options").get("user", get_default("user", self.defaults)),
-                host_entry.get("options").get("hostname", "[hostname_not_specified]"),
+                host_entry.get("options").get("hostname", host_entry.get("host")),
                 host_entry.get("options").get("port", get_default("port", self.defaults)),
             ))
 
