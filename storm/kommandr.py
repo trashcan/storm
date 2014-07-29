@@ -175,6 +175,8 @@ class prog(object):
         :param type: list
 
         """
+        if len(arg_list) == 0:
+                arg_list = ['-h']
         arg_map = self.parser.parse_args(arg_list).__dict__
         command = arg_map.pop(self._COMMAND_FLAG)
         return command(**arg_map)
